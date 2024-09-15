@@ -1,0 +1,99 @@
+body, html {
+    height: 100%; /* 设置body和html的高度为100% */
+    margin: 0; /* 移除默认的margin */
+  }
+
+  .background {
+    position: fixed; /* 固定背景图片 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/pic6.jpg'); /* 指定背景图片路径 */
+    background-size: cover; /* 让背景图片覆盖整个元素 */
+    background-position: center; /* 背景图片居中显示 */
+    background-repeat: no-repeat; /* 不重复背景图片 */
+    z-index: -1; /* 将背景图片置于底层 */
+  }
+  h1 {
+    font-family: helvetica, arial, sans-serif;
+    text-align: center; /* 使标题居中 */
+    margin-bottom: 20px; /* 可选：添加一些底部外边距 */
+  }
+  .content {
+    width: 640px; /* 设置内容的宽度 */
+    margin: 0 auto; /* 居中内容 */
+    position: relative; /* 相对定位，以便子元素可以绝对定位 */
+    z-index: 1; /* 确保内容在背景之上 */
+  }
+
+  .full-img {
+    position: relative;
+    display: block;
+    width: 100%; 
+    
+  }
+
+  .displayed-img {
+    width: 100%; 
+    height: 100%;
+    border: 8px solid #4e4c4c; 
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5), 0 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    top: 2px; 
+    left: 2px; 
+    width: 654px; 
+    height: calc(100% - 8px); 
+    background-color: rgba(0,0,0,0);
+   
+  }
+  button {
+    border: 0;
+    background: rgba(150,150,150,0.6);
+    text-shadow: 1px 1px 1px white;
+    border: 1px solid #999;
+    position: absolute;
+    cursor: pointer;
+    top: 2px;
+    left: 2px;
+  }
+  .thumb-bar {
+    width: 100%; /* 设置缩略图容器的宽度 */
+    overflow: hidden; /* 防止图片溢出 */
+    border: 8px solid #4e4c4c;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5), 0 4px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; 
+  }
+  .thumb-bar img {
+    width: 20%;
+    height: 100px;
+    float: left;
+    margin-right: 0; 
+    cursor: pointer;
+  }
+  .prev, .next {  
+    position: absolute;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    background-color: rgba(0, 0, 0, 0.5);  
+    color: white;  
+    border: none;  
+    cursor: pointer;  
+    padding: 10px;  
+    font-size: 18px;  
+  }  
+    
+  .prev {  
+    left: 10px;  
+  }  
+    
+  .next {  
+    left: 610px;  
+    right:0px;  
+  }
