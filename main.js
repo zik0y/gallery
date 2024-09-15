@@ -15,7 +15,7 @@ const alts = {
 };
 
 let currentImageIndex = 0;
-// ... 其他代码 ...  
+
   
 // 添加点击事件监听器到左右箭头按钮  
 prevButton.addEventListener('click', () => {  
@@ -28,7 +28,7 @@ nextButton.addEventListener('click', () => {
   updateDisplayedImage(currentImageIndex);  
 });  
   
-// ... 其他代码 ...
+
 function updateDisplayedImage(index) {
   displayedImage.src = `images/${images[index]}`;
   displayedImage.alt = alts[images[index]];
